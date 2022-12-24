@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="form">
+        <img src="https://jsday.id/images/sponsors/Logo-Hacktiv8.png" height="100px"/>
+        <h1>Hacktiv8 Final Project 3</h1>
+        <p>Prediction of Heart Failure Patient</p>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-style-agile">
+            <label>Age</label>
+            <div class="pom-agile">
+                <input placeholder="Age (Example: 25)" name="Age" type="text" required="">
+            </div>
+            <label>Ejection Fraction</label>
+            <div class="pom-agile">
+                <input placeholder="Ejection Fraction (Example: 38)" name="Ejection_Fraction" type="text" required="">
+            </div>
+            <label>Serum Creatinine</label>
+                        <div class="pom-agile">
+                            <input placeholder="Serum Creatinine (Example: 2.0)" name="Serum_Creatinine" type="text" required="">
+                        </div>
+            <label>Serum Sodium</label>
+                        <div class="pom-agile">
+                            <input placeholder="Serum_Sodium (Example: 140)" name="Serum_Sodium" type="text" required="">
+                        </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Prediction</button>
+        </form>
+
+
+        <p class="message">{{ prediction_text }}</p>
+    </div>
+
+</body>
+</html>

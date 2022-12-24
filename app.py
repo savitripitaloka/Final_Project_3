@@ -6,7 +6,7 @@ import streamlit as st
 
 
 # loading the saved model
-model = pickle.load(open('model.sav', 'rb'))
+model = pickle.load(open('D:/HACKTIV8/Final Project 3/Final_Project_3/model.pkl', 'rb'))
 
 
 app = flask.Flask(__name__, template_folder='templates')
